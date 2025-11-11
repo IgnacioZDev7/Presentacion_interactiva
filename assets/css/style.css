@@ -37,20 +37,6 @@ body {
     z-index: 1;
 }
 
-/* LOGO/BRILLO */
-#brillo {
-    position: absolute;
-    bottom: 0%;
-    right: 27%;
-    width: 10%;
-    max-width: 100px;
-    aspect-ratio: 1 / 1;
-    background-image: url('../../images/Logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 6;
-}
 
 /* TÍTULO */
 #titulo {
@@ -73,7 +59,7 @@ body {
     width: 9vw;
     height: auto;
     aspect-ratio: 0.8 / 1;
-    background-image: url('../../images/pikachuparado.png');
+    background-image: url('../../images/pikachu_sentado.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -83,7 +69,7 @@ body {
 
 /* MARIO SALTANDO */
 #mario.jumping {
-    background-image: url('../../images/pikachuparado.png');
+    background-image: url('../../images/pikachu_saltando.webp');
     animation: jump 0.6s ease-in-out;
     width: 16vw;
     height: auto;
