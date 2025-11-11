@@ -1,6 +1,4 @@
-/* ============================== */
-/* ESTILOS BASE */
-/* ============================== */
+/* Estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +11,7 @@ body {
     background: #a1d5ff;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* Contenedor principal */
 #gameContainer {
     position: relative;
     width: 100vw;
@@ -24,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-/* FONDO PRINCIPAL */
+/* Fondo principal */
 #backgroundImage {
     position: absolute;
     top: 0;
@@ -38,7 +36,7 @@ body {
 }
 
 
-/* TÍTULO */
+/* Titulo */
 #titulo {
     position: absolute;
     top: 5vh;
@@ -50,7 +48,7 @@ body {
     z-index: 4;
 }
 
-/* MARIO ESPERANDO */
+/* Personaje esperando */
 #mario {
     position: absolute;
     bottom: 8%;
@@ -67,7 +65,7 @@ body {
     display: block;
 }
 
-/* MARIO SALTANDO */
+/* Personaje saltando */
 #mario.jumping {
     background-image: url('../../images/pikachu_saltando.webp');
     animation: jump 0.6s ease-in-out;
@@ -91,7 +89,7 @@ body {
     }
 }
 
-/* BLOQUE CON INTERROGACIÓN */
+/* Bloque con interrogación */
 .block {
     position: absolute;
     top: 38%;
@@ -120,7 +118,7 @@ body {
     }
 }
 
-/* BOTÓN DE SALTO */
+/* Botón de salto */
 .jump-button {
     position: absolute;
     bottom: 2%;
@@ -149,7 +147,7 @@ body {
     transform: translateX(-50%) scale(0.95);
 }
 
-/* MENSAJE EMERGENTE */
+/* Mensaje emergente */
 .message {
     position: absolute;
     left: 50%;
@@ -224,9 +222,7 @@ body {
     transform: scale(1.15) rotate(90deg);
 }
 
-/* ============================== */
-/* TABLET (max 1024px) */
-/* ============================== */
+/* Tablet (max 1024px) */
 @media (max-width: 1024px) {
     #titulo {
         width: 45vw;
@@ -249,9 +245,7 @@ body {
     }
 }
 
-/* ============================== */
-/* CELULARES (max 768px) */
-/* ============================== */
+/* Celulares (max 768px) */
 @media (max-width: 768px) {
     #titulo {
         width: 60vw;
@@ -290,9 +284,7 @@ body {
     }
 }
 
-/* ============================== */
-/* CELULARES PEQUEÑOS (max 480px) */
-/* ============================== */
+/* Celulares pequeños (max 480px) */
 @media (max-width: 480px) {
     #titulo {
         width: 70vw;
