@@ -57,7 +57,8 @@ body {
     width: 9vw;
     height: auto;
     aspect-ratio: 0.8 / 1;
-    background-image: url('../../images/pikachu_sentado.png');
+    /*background-image: url('../../images/stitch/stitch_sentado.png');*/
+    background-image: url(../../images/pikachu/pikachu_sentado.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -67,7 +68,8 @@ body {
 
 /* Personaje saltando */
 #mario.jumping {
-    background-image: url('../../images/pikachu_saltando.webp');
+    /*background-image: url('../../images/stitch/stitch_saltando.png');*/
+    background-image: url(../../images/pikachu/pikachu_saltando.webp);
     animation: jump 0.6s ease-in-out;
     width: 16vw;
     height: auto;
