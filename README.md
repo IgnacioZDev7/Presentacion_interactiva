@@ -1,6 +1,6 @@
 # Interactivas UNIFRANZ
 
-Experiencia interactiva web inspirada en plataformas clásicas, diseñada para uso en pantallas o kioscos. El usuario puede hacer saltar al personaje (Pikachu, Stitch o cualquier otro que configures) para golpear un bloque y mostrar mensajes o interacciones, todo con una interfaz simple y accesible.
+Presentación interactiva web como alternativa para realizar presentaciones de temas de exposición, el usuario puede hacer saltar al personaje (Pikachu, Stitch o cualquier otro que se desee) para golpear un bloque y mostrar mensajes o interacciones, todo con una interfaz simple y accesible.
 
 ## Características
 - Personaje principal con dos estados: espera y salto (imágenes intercambiables).
@@ -25,19 +25,24 @@ interactivas/
 │  ├─ pikachu/              # Sprites de Pikachu (sentado/saltando)
 │  ├─ stitch/               # Sprites de Stitch (sentado/saltando)
 │  ├─ bloque.png            # Textura del bloque con interrogación
-│  ├─ FondoOrignal.jpg      # Imagen de fondo
+│  ├─ fondos/               # Imagenes de fondos de acuerdo al personaje
 │  └─ icono.png             # Ícono del botón (si se usa)
 ├─ sounds/
 │  ├─ coin.mp3              # Sonido de recompensa
 │  └─ salto.mp3             # Sonido de salto
-├─ instrucciones.txt         # Guía corta de edición para usuarios internos
-└─ README.md                 # Este archivo
+├─ instrucciones.txt        # Guía corta de edición para usuarios internos
+└─ README.md                # Descripción del proyecto
 ```
 
 ## Cómo ejecutar
-1. Abre el archivo `index.html` en tu navegador.
-2. Asegúrate de que las rutas relativas se mantengan (no muevas las carpetas sin actualizar las referencias).
-3. En entornos locales con servidores (p. ej. Laragon), coloca la carpeta en el directorio público y accede vía http.
+1. Alternativa:
+    * Dentro de Visual Studio Code instalar la extensión "Live Server".
+    * En el directorio del proyecto abrir el archivo `index.html` y con click derecho usar la opción "Open with Live Server".
+
+2. Alternativa: 
+    * Usando Laragon o XAMPP acceder en el navegador mediante la url: localhost/interactivas
+    * Para Laragon el proyecto debe estar en la ruta C:\laragon\www\interactivas
+    * Para XAMPP el proyecto debe estar en la ruta C:\xampp\htdocs\interactivas
 
 ## Personalización rápida
 
@@ -83,20 +88,10 @@ Para cambiar el tamaño del botón, ajusta:
 ## Recomendaciones de imágenes
 - Usa PNG/WebP con fondos transparentes para el personaje (mejor calidad y menor peso).
 - Mantén proporciones similares entre los sprites de espera y salto para que la animación sea fluida.
-- Optimiza imágenes (TinyPNG, Squoosh) antes de subirlas.
+- Optimiza imágenes antes de subirlas.
 
 ## Notas técnicas
 - CSS organiza estilos por secciones (fondo, personaje, bloque, botón, mensajes) y media queries para tablet y móviles.
-- Se eliminaron reglas vacías para evitar advertencias de linters.
 - Se utilizan unidades relativas (`vw`, `%`) para responsividad en distintas pantallas.
-- El id del personaje cambió de `#mario` a `#personaje`. En JavaScript se consulta con `document.getElementById('personaje')` y la animación de salto aplica la clase `.jumping` sobre ese elemento.
+- El id del personaje es `#personaje`. En JavaScript se consulta con `document.getElementById('personaje')` y la animación de salto aplica la clase `.jumping` sobre ese elemento.
 
-## Créditos y licencias
-- Verifica que las imágenes/sprites utilizados tengan permisos adecuados para su uso.
-- Este proyecto se pensó como demo educativa/experiencial. Ajusta la autoría y licencias según tus recursos.
-
-## Futuras mejoras (ideas)
-- Selector en pantalla para cambiar de personaje sin editar código.
-- Sistema de puntuación y lógica de colisiones más completa.
-- Soporte para control por teclado/gestos (espacio o flecha arriba).
-- Persistencia de datos (localStorage) para preferencias del usuario.
