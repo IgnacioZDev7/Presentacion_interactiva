@@ -40,7 +40,7 @@ function getNextMessage() {
 // Crear y reproducir sonido de salto
 function createJumpSound() {
     try {
-        const audio = new Audio('sounds/salto.mp3');
+        const audio = new Audio();
         audio.volume = 0.5;
         audio.play().catch(error => {
             console.log('Error al reproducir sonido de salto:', error);
@@ -53,7 +53,7 @@ function createJumpSound() {
 // Crear y reproducir sonido de moneda
 function createHitSound() {
     try {
-        const audio = new Audio('sounds/coin.mp3');
+        const audio = new Audio('sounds/dbz1.mp3');
         audio.volume = 0.5;
         audio.play().catch(error => {
             console.log('Error al reproducir sonido de moneda:', error);
