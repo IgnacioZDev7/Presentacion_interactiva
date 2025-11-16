@@ -6,7 +6,7 @@ let messages = [];
 
 // Elementos del DOM
 const jumpBtn = document.getElementById('jumpBtn');
-const mario = document.getElementById('mario');
+const personaje = document.getElementById('personaje');
 const block = document.getElementById('block');
 
 // Cargar propuestas desde JSON
@@ -63,12 +63,14 @@ function createHitSound() {
     }
 }
 
-// Manejar el salto de Mario
+// Manejar el salto del personaje
 function handleJump() {
     if (isJumping || messages.length === 0) return;
     
+    if (!personaje) return;
+
     isJumping = true;
-    mario.classList.add('jumping');
+    personaje.classList.add('jumping');
     
     createJumpSound();
 
@@ -77,7 +79,7 @@ function handleJump() {
     }, 400);
 
     setTimeout(() => {
-        mario.classList.remove('jumping');
+        personaje.classList.remove('jumping');
         isJumping = false;
     }, 800);
 }
