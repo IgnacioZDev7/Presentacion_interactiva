@@ -1,7 +1,7 @@
 # Interactivas UNIFRANZ
 
 Presentación interactiva web como alternativa para realizar presentaciones de temas de exposición, el usuario puede hacer saltar al personaje (Pikachu, Stitch o cualquier otro que se desee) para golpear un bloque y mostrar mensajes o interacciones, todo con una interfaz simple y accesible.
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Características
 - Personaje principal con dos estados: espera y salto (imágenes intercambiables).
