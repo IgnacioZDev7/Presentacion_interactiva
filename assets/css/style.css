@@ -51,14 +51,20 @@ body {
 /* Personaje esperando */
 #mario {
     position: absolute;
-    bottom: 8%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     width: 9vw;
     height: auto;
     aspect-ratio: 0.8 / 1;
+    /*URL PARA STITCH*/
     /*background-image: url('../../images/stitch/stitch_sentado.png');*/
-    background-image: url(../../images/pikachu/pikachu_sentado.png);
+
+    /*URL PARA PIKACHU*/
+    /*background-image: url(../../images/pikachu/pikachu_sentado.png);*/
+
+    /**URL PARA GOKU*/
+    background-image: url(../../images/goku/goku_espera.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -68,8 +74,14 @@ body {
 
 /* Personaje saltando */
 #mario.jumping {
+    /*URL PARA STITCH*/
     /*background-image: url('../../images/stitch/stitch_saltando.png');*/
-    background-image: url(../../images/pikachu/pikachu_saltando.webp);
+
+    /*URL PARA PIKACHU*/
+    /*background-image: url(../../images/pikachu/pikachu_saltando.webp);*/
+
+    /*URL PARA GOKU*/
+    background-image: url(../../images/goku/goku_salta-removebg-preview.png);
     animation: jump 0.6s ease-in-out;
     width: 16vw;
     height: auto;
@@ -78,15 +90,15 @@ body {
 
 @keyframes jump {
     0% {
-        bottom: 8%;
+        bottom: 15%;
         transform: translateX(-50%) rotate(0deg);
     }
     50% {
-        bottom: 45%;
+        bottom: 52%;
         transform: translateX(-50%) rotate(-3deg);
     }
     100% {
-        bottom: 8%;
+        bottom: 18%;
         transform: translateX(-50%) rotate(0deg);
     }
 }
@@ -123,31 +135,65 @@ body {
 /* Botón de salto */
 .jump-button {
     position: absolute;
-    bottom: 2%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 20vw;
-    max-width: 160px;
+    width: 12vw;
+    max-width: 135px;
     height: auto;
-    aspect-ratio: 1.6 / 1;
-    background-image: url('../../images/icono.png');
-    background-size: contain;
+    aspect-ratio: 2.2 / 1;
+    /* Nuevo estilo visual */
+    background: linear-gradient(135deg, #ffcf4a 0%, #ff9f1c 45%, #ff7a18 100%);
+    border: 0;
+    border-radius: 999px;
+    box-shadow: 0 8px 0 #b85a0a, 0 12px 24px rgba(0,0,0,0.35);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #3a2a00;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/* Icono + texto dentro del botón usando pseudo-elemento SVG embebido */
+.jump-button::before {
+    content: '';
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    z-index: 10;
+    background-size: 100% 100%;
+    /* Icono flecha/jump en SVG inline codificado */
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12l5-5v3h4V7l5 5-5 5v-3h-4v3l-5-5z' fill='%233a2a00'/%3E%3C/svg%3E");
+    filter: drop-shadow(0 1px 0 rgba(255,255,255,0.6));
+    margin-right: 6px;
+}
+
+/* Texto accesible con aria-label no es visible; añadimos etiqueta visual */
+.jump-button::after {
+    content: 'Saltar';
+    font-size: clamp(12px, 2.6vw, 16px);
 }
 
 .jump-button:hover {
-    transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 0 #b85a0a, 0 16px 28px rgba(0,0,0,0.4);
+    filter: brightness(1.05) saturate(1.05);
 }
 
 .jump-button:active {
-    transform: translateX(-50%) scale(0.95);
+    transform: translateX(-50%) translateY(2px) scale(0.98);
+    box-shadow: 0 4px 0 #b85a0a, 0 8px 14px rgba(0,0,0,0.35);
 }
+
+
 
 /* Mensaje emergente */
 .message {
@@ -233,7 +279,7 @@ body {
 
     #mario {
         width: 10vw;
-        bottom: 10%;
+        bottom: 15%;
     }
 
     .block {
@@ -242,8 +288,10 @@ body {
     }
 
     .jump-button {
-        width: 25vw;
-        bottom: 3%;
+        width: 14vw;
+        bottom: 8%;
+        max-width: 135px;
+        aspect-ratio: 2.2 / 1;
     }
 }
 
@@ -256,6 +304,7 @@ body {
 
     #mario {
         width: 12vw;
+        bottom: 15%;
     }
 
     .block {
@@ -264,8 +313,10 @@ body {
     }
 
     .jump-button {
-        width: 35vw;
-        bottom: 3%;
+        width: 22vw;
+        bottom: 8%;
+        max-width: 125px;
+        aspect-ratio: 2.2 / 1;
     }
 
     .message {
@@ -295,7 +346,7 @@ body {
 
     #mario {
         width: 16vw;
-        bottom: 10%;
+        bottom: 15%;
     }
 
     .block {
@@ -304,8 +355,10 @@ body {
     }
 
     .jump-button {
-        width: 45vw;
-        bottom: 4%;
+        width: 26vw;
+        bottom: 9%;
+        max-width: 120px;
+        aspect-ratio: 2.2 / 1;
     }
 
     .message {
